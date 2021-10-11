@@ -1,0 +1,252 @@
+@import "../../styles/constants";
+@import "../../styles/mixins";
+
+#main-page {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	align-content: stretch;
+	align-items: center;
+	height: 100%;
+	
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10%;
+		width: 35%;
+		
+		h1 {
+			font-family: Arial;
+			font-size: 32px;
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+		
+		.password-field {
+			width: 70%;
+		}
+		
+		.score-progress {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-top: 10px;
+			width: 70%;
+			
+			li {
+				display: inline-block;
+				width: 19.5%;
+				height: 6px;
+				border-radius: 6px;
+				background-color: #646d82;
+				
+				&.weak {
+					background-color: #B9180B;
+				}
+				&.vweak {
+					background-color: #F27F05;
+				}
+				&.medium {
+					background-color: #E3D30C;
+				}
+				&.strong {
+					background-color: #60E64C;
+				}
+				&.vstrong {
+					background-color: #34BE25;
+				}
+			}
+		}
+		
+		.ant-input-affix-wrapper {
+			padding: 10px 11px;
+			
+			& > input.ant-input {
+				text-align: center;
+			}
+		}
+		
+	}
+	
+	#info-panel {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		text-align: center;
+		margin-top: 40px;
+		
+		&.hide {
+			display: none;
+		}
+		
+		&.show {
+			display: block;
+		}
+		
+		h3 {
+			font-family: Arial;
+			font-size: 22px;
+			font-weight: bolder;
+			color: #000000;
+		}
+		
+		p {
+			font-family: Arial;
+			font-size: 14px;
+			text-align: center;
+			margin-top: 20px;
+		}
+		
+		ul {
+			margin-top: 20px;
+			
+			li {
+				font-family: Arial;
+				font-weight: bold;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+/*1600px*/
+@include layout(xxl) {
+	#main-page {
+		.container {
+			width: 40%;
+		}
+	}
+}
+
+/*1200px*/
+@include layout(xl) {
+	#main-page {
+		.container {
+			width: 60%;
+		}
+	}
+}
+
+/*992px*/
+@include layout(lg) {
+	#main-page {
+		.container {
+			width: 70%;
+		}
+	}
+}
+
+/*768px*/
+@include layout(md) {
+	#main-page {
+		.container {
+			width: 80%;
+			
+			h1 {
+				font-size: 26px;
+			}
+			
+			.password-field {
+				width: 80%;
+			}
+			
+			.score-progress {
+				width: 80%;
+			}
+		}
+	}
+}
+
+/*576px*/
+@include layout(sm) {
+	#main-page {
+		.container {
+			width: 95%;
+			
+			h1 {
+				font-size: 26px;
+				margin-bottom: 30px;
+			}
+			
+			.password-field {
+				width: 90%;
+			}
+			
+			.score-progress {
+				width: 90%;
+			}
+		}
+		
+		#info-panel {
+			margin-top: 40px;
+			
+			h3 {
+				font-size: 16px;
+			}
+			
+			p {
+				font-size: 12px;
+				margin-top: 20px;
+			}
+			
+			ul {
+				margin-top: 20px;
+				
+				li {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+
+/*480px*/
+@include layout(xs) {
+	#main-page {
+		.container {
+			width: 95%;
+			
+			h1 {
+				font-size: 22px;
+				margin-bottom: 30px;
+			}
+			
+			.password-field {
+				width: 90%;
+			}
+			
+			.score-progress {
+				width: 90%;
+			}
+		}
+		
+		#info-panel {
+			margin-top: 40px;
+			
+			h3 {
+				font-size: 16px;
+			}
+			
+			p {
+				font-size: 12px;
+				margin-top: 20px;
+			}
+			
+			ul {
+				margin-top: 20px;
+				
+				li {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}
+
+/*320px*/
+@include layout(xxs) {
+	#main-page {
+	}
+}

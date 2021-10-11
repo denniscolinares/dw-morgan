@@ -1,0 +1,69 @@
+@import "constants";
+
+@mixin grid($size) {
+    @if $size == xxs {
+        @media screen and (max-width: $max-screen-xxs) {
+            @content;
+        }
+    } @else if $size == xs {
+        @media screen and (max-width: $max-screen-xs) {
+            @content;
+        }
+    } @else if $size == sm {
+        @media screen and (min-width: $min-screen-sm) and (max-width: $max-screen-sm) {
+            @content;
+        }
+    } @else if $size == md {
+        @media screen and (min-width: $min-screen-md) and (max-width: $max-screen-md) {
+            @content;
+        }
+    } @else if $size == lg {
+        @media screen and (min-width: $min-screen-lg) and (max-width: $max-screen-lg) {
+            @content;
+        }
+    } @else if $size == xl {
+        @media screen and (min-width: $min-screen-xl) and (max-width: $max-screen-xl) {
+            @content;
+        }
+    } @else if $size == xxl {
+        @media screen and (min-width: $min-screen-xxl) and (max-width: $max-screen-xxl) {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: 1921px) {
+            @content;
+        }
+    }
+}
+
+@mixin layout($size) {
+    @if $size == xxs {
+        @media screen and (max-width: $min-screen-xxs) {
+            @content;
+        }
+    } @else if $size == xs {
+        @media screen and (max-width: $min-screen-xs) {
+            @content;
+        }
+    } @else if $size == sm {
+        @media screen and (max-width: $min-screen-sm) {
+            @content;
+        }
+    } @else if $size == md {
+        @media screen and (max-width: $min-screen-md) {
+            @content;
+        }
+    } @else if $size == lg {
+        @media screen and (max-width: $min-screen-lg) {
+            @content;
+        }
+    } @else if $size == xl {
+        @media screen and (max-width: $min-screen-xl) {
+            @content;
+        }
+    } @else if $size == xxl {
+        @media screen and (max-width: $min-screen-xxl) {
+            @content;
+        }
+    }
+}

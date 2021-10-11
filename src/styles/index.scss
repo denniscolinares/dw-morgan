@@ -1,0 +1,164 @@
+@import "reset";
+@import "constants";
+@import "colors";
+@import "fonts";
+@import "mixins";
+
+html,
+body {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    align-content: stretch;
+    flex-grow: 1;
+    width: 100%;
+    min-height: 100%;
+
+    &:after {
+        display: block;
+        content: "";
+    }
+}
+
+#loading-dialog {
+    z-index: 1201;
+    color: #ffffff;
+}
+
+/*1600px - 1920px*/
+@include grid(xxl) {
+}
+
+/*1200px - 1599px*/
+@include grid(xl) {
+}
+
+/*992px - 1199px*/
+@include grid(lg) {
+}
+
+/*768px - 991px*/
+@include grid(md) {
+}
+
+/*576px - 767px*/
+@include grid(sm) {
+}
+
+/*<576px*/
+@include grid(xs) {
+}
+
+/*1600px*/
+@include layout(xxl) {
+}
+
+/*1200px*/
+@include layout(xl) {
+}
+
+/*992px*/
+@include layout(lg) {
+}
+
+/*768px*/
+@include layout(md) {
+}
+
+/*576px*/
+@include layout(sm) {
+}
+
+/*480px*/
+@include layout(xs) {
+}
+
+.input-fieldset {
+    position: relative;
+    color: #213da5;
+    margin-bottom: 24px;
+
+    .ant-input,
+    .ant-select .ant-select-selector {
+        border-color: #213da5 !important;
+        border-radius: 5px;
+        box-shadow: 0px 3px 6px #00000029;
+        color: #646d82;
+        font-size: 11px;
+    }
+
+    input {
+        height: 34px;
+    }
+
+    textarea {
+        resize: none;
+        padding: 12px;
+    }
+
+    .input-label {
+        position: absolute;
+        top: 0;
+        left: 0.5rem;
+        background-color: white;
+        transform: translateY(-0.625rem);
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-size: 11px;
+    }
+}
+
+#notistack-snackbar {
+    white-space: pre-wrap;
+}
+
+.ant-form .ant-row .flex-direction-row {
+    flex-direction: row;
+}
+
+.MuiButtonBase-root {
+    &.MuiButton-root {
+        text-transform: capitalize;
+    }
+}
+
+.rmdp-panel-body {
+    li {
+        .b-deselect {
+            color: black;
+        }
+    }
+}
+
+.swal-footer {
+    text-align: center;
+}
+
+.swal-button {
+    padding: 6px 33px;
+    background-color: #003da5;
+
+    &:not([disabled]) {
+        &:hover {
+            background-color: #2e3f9e;
+        }
+    }
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+    border-bottom: none;
+}

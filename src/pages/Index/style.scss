@@ -1,0 +1,42 @@
+@import "../../styles/constants";
+@import "../../styles/mixins";
+
+#public-layout {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    background-color: #efefef;
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        min-height: 100%;
+    }
+}
+
+/*1600px*/
+@include layout(xxl) {
+}
+
+/*1200px*/
+@include layout(xl) {
+}
+
+/*992px*/
+@include layout(lg) {
+}
+
+/*768px*/
+@include layout(md) {
+}
+
+/*576px*/
+@include layout(sm) {
+}
+
+/*480px*/
+@include layout(xs) {
+}
